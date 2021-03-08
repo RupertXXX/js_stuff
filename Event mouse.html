@@ -1,0 +1,71 @@
+<html>
+	<head>
+	<title>Дистанционное обучение. Управление мышкой</title>
+	<style>
+		.one, .two{
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			left: 500px;
+			top: 300px;
+		}
+		.two {
+			background-color: green;
+			left: 1000px;
+		}
+		.one {
+			background-color: blue;
+			border-radius: 100px; 
+		}
+	</style>
+	</head> 
+	<body>
+	<div class = one id = one></div>
+	<div class = two id = two></div>
+	<script>	
+		var isDown1, isDown2, c, d;
+		one.addEventListener('mousedown', function(a) {
+			isDown1 = true;
+			offset = [
+				one.offsetLeft - a.clientX,
+				one.offsetTop - a.clientY
+				];
+			}, true);
+		document.addEventListener('mouseup', function() {
+			isDown1 = false;
+		}, true);
+		document.addEventListener('mousemove', function(event1) {
+			event1.preventDefault();
+			if (isDown1) {
+				mousePosition = {
+					x : event1.clientX,
+					y : event1.clientY
+				};
+				one.style.left = (mousePosition.x + offset[0]) + 'px';
+				one.style.top  = (mousePosition.y + offset[1]) + 'px';
+			}
+		}, true);
+		two.addEventListener('mousedown', function(b) {
+			isDown2 = true;
+			offset = [
+				two.offsetLeft - b.clientX,
+				two.offsetTop - b.clientY
+				];
+			}, true);
+		document.addEventListener('mouseup', function() {
+			isDown2 = false;
+		}, true);
+		document.addEventListener('mousemove', function(event2) {
+			event2.preventDefault();
+			if (isDown2) {
+				mousePosition = {
+					x : event2.clientX,
+					y : event2.clientY
+				};
+				two.style.left = (mousePosition.x + offset[0]) + 'px';
+				two.style.top  = (mousePosition.y + offset[1]) + 'px';
+			}
+		}, true);	
+	</script>
+	</body>
+</html>

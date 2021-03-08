@@ -1,0 +1,60 @@
+
+onLoad = n1()
+
+input{
+	display: block;
+}
+
+
+function n6()
+{	
+	var canvas1 = document.getElementById("canvas1");
+	var ctx1 = canvas1.getContext('2d');
+	
+	var x = 20;
+	var y = 20;
+	var x2 = 25;
+	var y2 = 25;
+	function draw(){
+	ctx1.fillStyle = "green";
+	ctx1.fillRect(x,y,x2,y2);
+	x++;
+	y++;
+	// x2++;
+	// y2++;
+	window.requestAnimationFrame(draw);
+	ctx1.clearRect(x,y,x2,y2);
+	}
+	draw();	
+}
+
+Math.floor(Math.random() * (max - min + 1)) + min;
+
+var audio = new Audio();
+audio.preload = 'auto';
+audio.src = '1.mp3';
+audio.play();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

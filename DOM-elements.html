@@ -1,0 +1,68 @@
+<html>
+	<head>
+	<title>Дистанционное обучение. Работа с DOM</title>
+	<style>
+		.fff {
+			width: 50%;
+			height: 500px;
+			border: 1px black solid;
+			position: absolute;
+			left: 25%;
+		}
+		
+		.rtt {
+			position: absolute;
+			left: 10px;
+			width: 70%;
+			height: 1px;
+			background-color: black;
+		}
+		
+		button {
+			position: absolute;
+			left: 20px;
+			margin-top: 10px;
+		}
+		
+		h1 {
+			margin-left: 8px;
+		}
+		
+		.box {
+			position: absolute;
+			width: 65px;
+			height: 40px;
+			background-color: gray;
+			border: 1px	solid black;
+			padding: 4px;
+		}
+	</style>
+	</head>
+	<body onload = 'f1()'>
+		<div id = "q" class = "fff">
+			<h1 id = "h"></h1>
+			<div class = "rtt"></div>
+			<button class = "b" id = "b" onClick=f1()></button>
+			<div class = "box" id = "box"></div>
+		</div>
+		<script>
+			var b = document.getElementById('b');
+			b.textContent = 'Вывести блок с координатами';
+			var h = document.getElementById('h');
+			h.textContent = 'Практическая работа №20';
+			function f1() {
+				var x, y, xd, yd, box;
+				var newline = "\r\n";
+				x = Math.round((Math.random()*512)+20);
+				y = Math.round((Math.random()*300)+150);
+				xd = document.getElementById('box');
+				xd.style.left = x + 'px';
+				yd = document.getElementById('box');
+				yd.style.top = y + 'px';
+				box = document.getElementById('box');
+				box.textContent = 'x: ' + x + 'px' + newline + 'y: ' + y + 'px';
+			}
+		</script>
+	</body>
+</html>
+

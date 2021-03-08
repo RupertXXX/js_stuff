@@ -1,0 +1,61 @@
+.main {
+	height : 605px;
+	width : 605px;
+	border : 0.5px solid white;
+}
+.qlass1 {
+	height : 150px;
+	width : 150px;
+	float : left;
+	background-color : #eb6639;
+	border : 0.5px solid white;
+}
+.qlass2{
+	height : 150px;
+	width : 300px;
+	background-color : #f8b159;
+	float : left;
+	border : 0.5px solid white;
+}
+.qlass3{
+	height : 300px;
+	width : 150px;
+	background-color : #0a86ce;
+	float : right;
+	border : 0.5px solid white;
+}
+.qlass4{
+	height : 450px;
+	width : 150px;
+	float : left;
+	background-color : #ec458d;
+	border : 0.5px solid white;
+}
+.qlass5{
+	height : 300px;
+	width : 150px;
+	background-color : #82d8f9;
+	float : left;
+	border : 0.5px solid white;
+}
+.qlass6{
+	height : 150px;
+	width : 150px;
+	background-color : #d06da3;
+	float : left;
+	border : 0.5px solid white;
+}
+.qlass7{
+	height : 150px;
+	width : 300px;
+	background-color : #ecdf6d;
+	float : left;
+	border : 0.5px solid white;
+}
+.qlass8{
+	height : 150px;
+	width : 450px;
+	background-color : #4dace6;
+	float : left;
+	border : 0.5px solid white;
+}

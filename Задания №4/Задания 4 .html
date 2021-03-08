@@ -1,0 +1,199 @@
+<DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title> Задание 4 </title>
+		<style>
+			.line{
+				border: 10px solid black;
+				border-radius: 3px;
+				height: 0px;
+				width: 650px;
+			}
+			.pictures {
+				margin-top: 20px;
+			}
+			.pictures img{
+				display: inline-block;
+				height: 200px;
+				width: 300px;
+				border: 3px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style='color: red;' > Обращение к объектам документа и браузера </h1>
+		<div class="line" id="line"> </div>
+		<div class="pictures">
+			<img id="pic0" src="1.jpg" alt="suck my ass">
+			<img id="pic1" src="2.jpg" alt="suck my ass">
+			<img id="pic2" src="3.jpg" alt="suck my ass">
+		</div>
+		<h2 style='color: red;' > Форма с кнопками </h2>
+		<div>
+			<button onClick = z1()>Дата</button>
+			<button onClick = z2()>Новое окно </button>
+			<button onClick = z3()>Страница</button>
+			<button onClick = z4()>Линия</button>
+			<button onClick = z5()>Рисунок</button>
+			<button onClick = z6()>Числа</button>
+			<button onClick = z7()> Сортировка массива</button>
+			<button onClick = z8()>День недели</button>
+		</div>
+		<script>
+			function z1(){
+				var a = new Date();
+				var b = a.getMonth();
+				var l = a.getDate();
+				var rt = a.getDay();
+				var hap = 177 - 30*b - l;
+				var dayArray = ["", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+				var monthArray = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+				alert("Сегодня: "+ dayArray[rt] + " " + l + " " + monthArray[b] + " " + "\n" + "До конца учебного года: " + hap + " дней");
+			}
+			function z2(){
+				var newWin = window.open("newWindow.html", "hello", "width=800,height=500");
+			}
+			function z3(){
+			var all = "";
+			for(let i = 1; i < document.all.length; i++)
+			{
+				all = all + i + " tagName= " + document.all[i].tagName + " id= " + document.all[i].id + "\n"
+			}
+			alert(all);
+			}
+			function z4(){
+				var r = Math.floor(Math.random() * (256));
+				var g = Math.floor(Math.random() * (256));
+				var b = Math.floor(Math.random() * (256));
+				var c = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+				var pop = document.getElementById("line");
+				pop.style.borderColor = c;
+			}
+			function z5(){
+				n = confirm('Изменить картинки?');
+				if(n == 0)
+				{
+					var pig0 = document.getElementById("pic0");
+					pig0.style.height = 100;
+					pig0.style.width = 150;
+					pig0.style.marginTop = 40;
+					pig0.style.marginBottom = 40;
+					pig0.style.border = 2;
+					pig0.style.borderColor = 'black';
+					pig0.style.borderRadius = 10;
+					pig0.style.transform = 'rotate(-30deg)';
+					var pig1 = document.getElementById("pic1");
+					pig1.style.height = 100;
+					pig1.style.width = 150;
+					pig1.style.marginTop = 40;
+					pig1.style.marginBottom = 40;
+					pig1.style.border = 2;
+					pig1.style.borderColor = 'black';
+					pig1.style.borderRadius = 10;
+					pig1.style.transform = 'rotate(-30deg)';
+					var pig2 = document.getElementById("pic2");
+					pig2.style.height = 100;
+					pig2.style.width = 150;
+					pig2.style.marginTop = 40;
+					pig2.style.marginBottom = 40;
+					pig2.style.border = 2;
+					pig2.style.borderColor = 'black';
+					pig2.style.borderRadius = 10;
+					pig2.style.transform = 'rotate(-30deg)';
+				}
+				else
+				{
+					var pig0 = document.getElementById("pic0");
+					pig0.style.height = 100;
+					pig0.style.width = 150;
+					pig0.style.marginTop = 40;
+					pig0.style.marginBottom = 40;
+					pig0.style.border = 2;
+					pig0.style.borderColor = 'red';
+					pig0.style.borderRadius = 10;
+					pig0.style.transform = 'rotate(30deg)';
+					var pig1 = document.getElementById("pic1");
+					pig1.style.height = 100;
+					pig1.style.width = 150;
+					pig1.style.marginTop = 40;
+					pig1.style.marginBottom = 40;
+					pig1.style.border = 2;
+					pig1.style.borderColor = 'red';
+					pig1.style.borderRadius = 10;
+					pig1.style.transform = 'rotate(30deg)';
+					var pig2 = document.getElementById("pic2");
+					pig2.style.height = 100;
+					pig2.style.width = 150;
+					 
+					pig2.style.marginTop = 40;
+					pig2.style.marginBottom = 40;
+					pig2.style.border = 2;
+					pig2.style.borderColor = 'red';
+					pig2.style.borderRadius = 10;
+					pig2.style.transform = 'rotate(30deg)';
+				}
+			}
+			function z6(){
+				var m = +prompt("Введите число M: ");
+				var n = +prompt("Введите число N: ");
+				var sum = 0;
+				if (m % 2 == 0){
+				for(var i = m + 1; i <= n; i+=2){
+						sum = sum + i;
+						document.write("Числа: ", i, '<br>');
+					}
+				}
+				else{
+					for(var i = m; i <= n; i+=2){
+						sum = sum + i;
+						document.write("Числа: ", i, '<br>');
+					}
+				}
+				document.write("Сумма чисел: ", sum, '<br>');
+				document.log('Калорийность обеда');
+			}
+			function z7(){
+				n = parseInt(prompt('Введите n'));
+				tory = parseInt(prompt('Введите нижнюю границу'));
+				trina = parseInt(prompt('Введите верхнюю границу'));
+				document.write("Массив: ");
+				var firstArray = new Array(n);
+				for(let i = 0; i < n; i++){
+					x = parseInt(Math.random() * (trina - tory) + tory );
+					firstArray[i] = x;
+				}
+				html = "<table border='1' cellspacing='0'>";
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Количество чисел: " + "</td>";
+				for(let x = 1; x <= n; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + x + "</td>";
+				}
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Массив: " + "</td>";
+				for(let x = 0; x <= n - 1; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + firstArray[x] + "</td>";
+				}
+				document.write(firstArray + "<br>");
+				function compare(a, b){
+					return a - b;
+				}
+
+				a = firstArray.sort(compare);
+				document.write("Массив по возрастанию: " + a);
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Массив по возрастанию: " + "</td>";
+				for(let x = 0; x <= n - 1; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + a[x] + "</td>";
+				}
+				document.write(html);
+			}
+			function z8(){
+				var secondArray = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+				var number = parseInt(prompt('Введите номер дня недели'));
+				var secontArray = ["red", "yellow", "pink", "green", "orange", "blue", "violet",];
+				document.write("<p style ='color:" + secontArray[number] + "; font-size: 40px;'>" + "Сегодня " + secondArray[number] + "</p>");
+			}
+		</script>
+	</body>
+</html>

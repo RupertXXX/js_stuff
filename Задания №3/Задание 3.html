@@ -1,0 +1,61 @@
+<DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title> Массивы </title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<h1> 1. Задание 1 </h1>
+		<button onClick = z1()>Выполнить</button>
+		<script>
+			function z1(){
+				n = parseInt(prompt('Введите n'));
+				tory = parseInt(prompt('Введите нижнюю границу'));
+				trina = parseInt(prompt('Введите верхнюю границу'));
+				document.write("Массив: ");
+				var firstArray = new Array(n);
+				for(let i = 0; i < n; i++){
+					x = parseInt(Math.random() * (trina - tory) + tory );
+					firstArray[i] = x;
+				}
+				html = "<table border='1' cellspacing='0'>";
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Количество чисел: " + "</td>";
+				for(let x = 1; x <= n; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + x + "</td>";
+				}
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Массив: " + "</td>";
+				for(let x = 0; x <= n - 1; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + firstArray[x] + "</td>";
+				}
+				document.write(firstArray + "<br>");
+				function compare(a, b){
+				return a - b;
+				}
+
+				a = firstArray.sort(compare);
+				document.write("Массив по возрастанию: " + a);
+				html += "<tr>";
+				html += "<td style='height:40px; width:30px" + ";'" + ">" + "Массив по возрастанию: " + "</td>";
+				for(let x = 0; x <= n - 1; x++){
+					html += "<td style='height:40px; width:30px" + ";'" + ">" + a[x] + "</td>";
+				}
+				document.write(html);
+			}
+		</script>
+		<h1> 2. Задание 2 </h1>
+		<button onClick = z2()>Выполнить</button>
+		<script>
+			function z2(){
+				var secondArray = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+				var number = parseInt(prompt('Введите номер дня недели'));
+				var secontArray = ["red", "yellow", "pink", "green", "orange", "blue", "violet",];
+				document.write("<p style ='color:" + secontArray[number] + "; font-size: 40px;'>" + "Сегодня " + secondArray[number] + "</p>");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <title>Practice</title>
+    </head>
+    <body id="body1" onLoad="movie1_1(), movie1_2(), movie1_3(), movie2_1(), movie2_2(), movie2_3()">
+        <header>
+            <div class="wrapper">
+                <img src="img/100.png" alt="menu" class="tel_menu" id="tel_men">
+                <div class="menu" id="menu">
+                    <a href="#about_me"> Обо мне </a>
+                    <a href="#skills"> Профессиональные навыки </a>
+                    <a href="#portfolio"> Портфолио </a>
+                    <a href="#contacts"> Контакты </a>
+                </div>
+            </div>
+        </header>
+        <section class="about_me" id="about_me">
+            <div class="wrapper">
+                <img src="img/me.png" alt="me" class="me_pc">
+                <img src="img/me_tab.png" alt="me" class="me_tab">
+                <img src="img/me_tel.png" alt="me" class="me_tel">
+                <div class="main_text">
+                    <div class="title">ПЕРСОНАЛЬНЫЕ ДАННЫЕ</div>
+                    <div class="text">
+                        <div class="is_text">ФИО:  Куцко Николай Сергеевич</div>
+                        <div class="is_text">Учебное заведение: СПб ГБПОУ КИТ</div>
+                        <div class="is_text">Специальность: Разработчик веб и мультимедийных приложений</div>
+                    </div>
+                    <a href="#contacts" class="btn_contacts">Контакты</a>
+                </div>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <div class="wrapper">
+                <div class="skills_main">
+                    <div class="title">Проффесиональные навыки</div>
+                    <div class="text">
+                        <div>Адаптивная вёрстка с использованием HTML, CSS и JavaScript</div>
+                        <div>Работа с БД с использованием SQL и/или Access</div>
+                        <div>Базовые знания языка C</div>
+                        <div>Работа с ПО пакета Microsoft</div>
+                        <div>Базовые знания языка JavaScript</div>
+                        <div>Практическая работа в редакторе Photoshop</div>
+                        <div>Практическая работа в редакторе Figma</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="wrapper">
+            <div class="line"></div>
+        </div>
+        <section class="portfolio" id="portfolio">
+            <div class="wrapper">
+                <div class="title">Портфолио</div>
+                <div class="portfolio_1">
+                    <div class="text_1">Примеры работ по МДК 08.01</div>
+                    <div class="images_1_main">
+                        <div class="images_1">
+                            <IMG class="slide1_1" NAME=u>
+                            <IMG class="slide1_2" NAME=i>
+                            <IMG class="slide1_3" NAME=o>
+                        </div>
+                        <div class="mimi_text_1">Разработка сайта</div> 
+                    </div>
+                </div>
+                <div class="portfolio_2">
+                    <div class="text_2">Примеры работ по МДК 08.02</div>
+                    <div class="images_2_main">
+                        <div class="images_2">
+                            <IMG class="slide1_1" NAME=j>
+                            <IMG class="slide1_2" NAME=k>
+                            <IMG class="slide1_3" NAME=l> 
+                        </div>
+                        <div class="mimi_text_2">Разработка дизайна</div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="wrapper">
+            <div class="line"></div>
+        </div>
+        <section class="contacts" id="contacts">
+            <div class="wrapper">
+                <div class="title">Контакты</div>
+                <div class="text_button">
+                    <div class="text_main">
+                        <div class="text_left">
+                            <div class="email">Электронный почта: </div>
+                            <div class="number">Номер телефона: </div>
+                        </div>
+                        <div class="text_right">
+                            <div class="email">nicolai@gmail.com</div>
+                            <div class="number">8 800 555 35 35</div>
+                        </div>
+                    </div>
+                    <a href="#contacts" class="message_btn" id="btn_win_open"> Отправить сообщение </a>
+                    <div class="all" id="wind">
+                        <div class="window">
+                            <img src="img/close.svg" class="btn_form_close" id="btn_win_close">
+                            <form>
+                                <div class="title">
+                                    <div class="title_is">Отправьте ваше сообщение</div>
+                                </div>
+                                <div class="up">
+                                    <div class="form_is">
+                                        <input type="text" class="name" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="form_is">
+                                        <input type="email" class="email" placeholder="Ваш email">
+                                    </div>
+                                </div>		
+                                <div class="form_message">
+                                    <input type="text" name="name_is" placeholder="Ваше сообщение">
+                                </div>
+                                <a href="#contacts" class="send_btn" id="btn_win_send">Отправить</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="foot">
+                <div class="text">Copyright © , 2020 Санкт-Петербургский колледж</div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
